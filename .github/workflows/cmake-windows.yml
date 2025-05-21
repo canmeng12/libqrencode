@@ -51,10 +51,10 @@ jobs:
       shell: bash
       # Example: Create a zip package of the build artifacts
       run: |
-        zip -r build-artifacts.zip .
+        Compress-Archive -Path . -DestinationPath $env:GITHUB_WORKSPACE/build-artifacts.zip
         # Optionally, you can upload the artifact to GitHub Actions
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
           name: build-artifacts
-          path: ${{ runner.workspace }}/build/build-artifacts.zip
+          path: $env:GITHUB_WORKSPACE/build-artifacts.zip
