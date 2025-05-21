@@ -38,7 +38,7 @@ jobs:
       run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DWITH_TESTS=yes -DBUILD_SHARED_LIBS=on
 
     - name: Build
-      working-directory: ${{runner.workspace}}/build
+      working-directory: ${{runner.workspace}}/build/bin
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build . --config $BUILD_TYPE
@@ -59,4 +59,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: build_package
-        path: build_package.zip
+        path: ${{runner.workspace}}/build_package.zip
