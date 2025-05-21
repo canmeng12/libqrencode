@@ -48,7 +48,7 @@ jobs:
 
     - name: Package
       working-directory: ${{ runner.workspace }}/build
-      shell: bash
+      shell: powershell
       # Example: Create a zip package of the build artifacts
       run: |
         Compress-Archive -Path . -DestinationPath $env:GITHUB_WORKSPACE/build-artifacts.zip
