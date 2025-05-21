@@ -2,6 +2,7 @@
 
 **Attention:** This repository contains the development version of libqrencode. See <https://fukuchi.org/works/qrencode/> for the official stable releases. At this moment, the latest stable release is version 4.1.1.
 
+
 GENERAL INFORMATION
 ===================
 Libqrencode is a fast and compact library for encoding data in a QR Code,
