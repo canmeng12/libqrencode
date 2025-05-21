@@ -22,7 +22,7 @@ jobs:
       with:
           vcpkgArguments: getopt:x64-windows libiconv:x64-windows libpng:x64-windows
           vcpkgDirectory: '${{ github.workspace }}/vcpkg'
-          #vcpkgGitCommitId: 'fca18ba3572f8aebe3b8158c359db62a7e26134e'
+          vcpkgGitCommitId: 'ce613c41372b23b1f51333815feb3edd87ef8a8b'
 
         # --- Step 3: Verify vcpkg installation ---
     - name: Verify vcpkg installation

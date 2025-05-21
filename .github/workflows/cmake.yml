@@ -38,7 +38,7 @@ jobs:
       run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DWITH_TESTS=yes -DBUILD_SHARED_LIBS=on
 
     - name: Build
-      working-directory: ${{runner.workspace}}/build/bin
+      working-directory: ${{runner.workspace}}/build
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build . --config $BUILD_TYPE

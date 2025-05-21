@@ -107,6 +107,11 @@ set(QRENCODE_HDRS qrencode_inner.h
                   mqrspec.h
                   mmask.h)
 
+# 设置输出目录
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 if(BUILD_SHARED_LIBS)
     if(MSVC)
         set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
